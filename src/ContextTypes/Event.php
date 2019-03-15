@@ -11,6 +11,9 @@ class Event extends AbstractContext
      */
     protected $structure = [
         'name' => null,
+        'description' => null,
+        'performer' => null,
+        'image' => null,
         'startDate' => null,
         'endDate' => null,
         'url' => null,
@@ -31,7 +34,12 @@ class Event extends AbstractContext
                 $values[$key] = $this->mapProperty([
                     'name' => '',
                     'price' => '',
+                    'priceCurrency' => '',
                     'url' => '',
+                    'validFrom' => '',
+                    'validThrough' => '',
+                    'availability' => '',
+                    'itemCondition' => '',
                 ], $value);
             }
         }
